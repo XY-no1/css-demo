@@ -1,0 +1,15 @@
+配置： 
+	name
+		git config --global user.name ""
+	email
+		git config --global user.email ""
+
+使用git
+	git status
+		查看当前仓库状态
+	git init
+		初始化仓库
+
+刚刚添加到项目中的文件为未跟踪状态：
+	未跟踪--》暂存
+		git add 文件名
