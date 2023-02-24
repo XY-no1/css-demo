@@ -13,5 +13,22 @@
 刚刚添加到项目中的文件为未跟踪状态：
 	未跟踪--》暂存
 		git add 文件名 将文件切换到暂存的状态
+		git add * 将所有已修改（未跟踪）的文件暂存
 	暂存--》未修改	
 		git commit -m "" 将暂存的文件存到仓库中
+		git commit -a -m "" 提交所有已修改的文件（不会提交未跟踪的文件）
+
+常用命令 
+	git restore <filename> 重置文件
+	git restore --staged 将文件从暂存的状态取消
+	git rm <filename>      删除文件   -f 强制删
+	git mv from to  移动文件 改名文件 
+
+分支
+	git branch 查看当前分支
+	git branch <branch name> 创建新的分支
+	git branch -d <branchname> 删除分支
+	git switch <branchname> 切换到指定分支
+	git switch -c <branch> 创建并切换到新分支
+
+	git merge <bugbranchname> 合并分支 快速合并
