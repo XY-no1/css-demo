@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 
+         *  弹性盒 
+                - flex 块弹性盒
+                - inline-felx  行内弹性盒
+         */
+        ul{
+            width: 400px;
+            height: 200px;
+            display: flex;
+            list-style: none;
+            border: 10px rgb(214, 10, 153) solid;
+            font-size: 30px;
+            color: aliceblue;
+            /*
+                flex-direction
+
+                主轴-弹性子元素排列方向   <<-->>  辅轴 垂直于主轴的方向
+                    -定义弹性盒的主轴方向
+                        - row 默认值 主轴自左向右 元素依次排列
+                        - column 主轴自上向下垂直排列
+                        - row-reverse  主轴自右向左
+                        - column 主轴自下向上
+             */
+            /* flex-direction: row; */
+            /*
+             *  flex-warp
+                    - 设置弹性子元素是否换行
+                        - nowarp 默认值 不换行 
+                        - warp 沿着辅轴的方向换行*自己的理解*
+                        - warp-reverse 沿着辅轴相反的方向换行**
+             */
+            /* flex-wrap:nowrap; */
+            /* 
+             *  flex-flow
+                    - flex-wrap和flex-direction的合并写法
+                            flex-flow:row nowrap 等价于 flex-direction:row; flex-wrap:nowrap
+                            flex-flow的两个值没有先后顺序的具体要求
+             */
+             flex-flow: row nowrap;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            /* 
+             *  flex-shrink
+                    - 弹性子元素的缩放系数
+                        默认情况下 弹性盒缩小后 弹性子元素也会随着缩放
+                        默认值 1
+                        0 表示弹性子元素不缩放
+             */
+             flex-shrink:0;
+        }
+        li:first-child{
+            background-color: rgb(27, 129, 197);
+        }
+        li:nth-child(2){
+            background-color: rgb(202, 25, 25);
+        }
+        li:nth-child(3){
+            background-color: #c2c2c2;
+        }
+        li:nth-child(4){
+            background-color: #bfa;
+        }
+        li:nth-child(5){
+            background-color: #6c6c6c;
+        }
+        .box1{
+            display: flex;
+            border: 10px gold solid;
+            width: 250px;
+            height: 400px;
+            flex-flow: row wrap;
+            /* 弹性盒的对齐方式 */
+            /*
+             *  主轴方向：
+                    - justify-content
+                        默认值 normal 与不设置对齐方向的位置相同
+                        start    元素在主轴中朝向容器的起始边缘对齐
+                        end      元素在主轴中朝向容器的结束边缘对齐
+                        flex-stat和flex-end等同于start和end
+                        center   弹性子元素主轴上居中对齐
+                        space-between  将主轴方向空白部分均分到弹性子元素间对齐
+                        space-around  将主轴方向的空白部分均分到每个弹性子元素的两侧
+                        space-evenly 将主轴方向的空白均分到元素之间  包括起始和结束位置
+             */
+             justify-content: stretch;
+             /* 辅轴方向 */
+             /* 
+              * align-item
+                    默认值 normal 与不设置对齐方向的位置相同
+                        start    元素在辅轴中朝向容器的起始边缘对齐
+                        end      元素在辅轴中朝向容器的结束边缘对齐
+                        flex-stat和flex-end等同于start和end
+                        center   弹性子元素辅轴上居中对齐
+                        stretch 拉伸 元素会自动拉伸将轴撑满
+            */
+            /* align-items: end; */
+            /* align-content 设置元素在辅轴的空间分配        
+                        space-between  将辅轴方向空白部分均分到弹性子元素间对齐
+                        space-around  将辅轴方向的空白部分均分到每个弹性子元素的两侧
+                        space-evenly 将辅轴方向的空白均分到元素之间  包括起始和结束位置
+              */
+              /* align-content: space-evenly; */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: #bff;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(201, 67, 201);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <hr>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>
