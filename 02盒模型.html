@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+
+            /* 边框
+                border-width 边框的宽度
+                border-color 边框颜色
+                border-style 边框样式
+             */
+             border-width: 10px;
+             border-color: red;
+             border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        盒模型
+            网页布局首先要确定元素大小
+            可以把每个网页看成一个盒子
+                每一个盒子由以下几部分组成：
+                    - 内容区
+                        - 内容区元素在内部 大小由width和height决定
+                    - 边框
+                    -内边距
+                        -内容区与边框的距离
+                    -外边距
+                        -盒子和盒子之间的距离
+                    box-sizing盒子模型
+                        - content-box 默认值 width和height决定内容区大小，可见大小包括width+height+padding+border
+                        - border-box width和height决定盒子可见框大小
+     -->
+    <div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 1px solid red;
+            width: 50px;
+            /* 文本超出显示为省略号 */
+            /* 
+                第一步 设置文本不换行
+             */
+            white-space:nowrap;
+            /* 第二步 超出部分隐藏 */
+            overflow: hidden;
+            /* 第三步 文本超出部分省略号 */
+            text-overflow: ellipsis;
+        }
+
+        /* 
+            font-face
+                - 通过它可以将远程字体提供给用户使用
+                - 用户可能无法第一时间下载完成
+
+                - 注意版权问题
+            
+        用法
+            @font-face {
+                服务器中字体的路径
+                src:url("")
+                字体的名字，自定义
+                font-family:
+            }
+         */
+
+         /* 
+            字体图标
+                fontawesome.com
+
+                下载·解压缩·复制css和webfonts到项目目录·引入all.css
+                页面添加对应标签
+          */
+
+          /* 
+                iconfont.com
+                1.选好用的字体图标
+                2.添加购物车
+                3.购物城中点击添加至项目（项目勾选彩色），下载至本地
+                4.将字体css样式表和字体文件添加到项目中，引入css
+                5.通过类或者&******实体使用
+           */
+    </style>
+</head>
+<body>
+    <p>熬了经典思维</p>
+    <hr>
+    <!-- <script>
+        console.log(null==undefined);
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距</title>
+    <style>
+        /* 
+            外边距折叠
+                -垂直方向的相邻外边距会发生重叠
+                    兄弟元素间外边距会取较大值
+         */
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: rgb(255,0,0);
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: blue;
+            margin-top: 100px;
+        }
+
+        /* 
+            父子元素间 子元素外边距会传递给父元素 影响布局
+                -解决 
+                    - 不使用margin 使用padding
+                    - 给父元素设置边框使不相邻
+         */
+        .box3{
+            width: 400px;
+            height: 400px;
+            background:#568;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 50px;
+            
+        }
+        /* 
+            行内元素
+                内容区：
+                    - 大小由内容决定 width和height不能设置用来改变内容大小
+                
+                内边距
+                    -可以设置 但垂直方向的内边距不影响布局
+                
+                边框
+                    -可以设置 但垂直方向的内边距不影响布局
+                
+                外边距
+                    - 可以设置水平方向的外边距
+         */
+
+         /* 
+            overflow属性
+                默认值：visiable 超出部分也显示
+                hidden 超出部分隐藏
+                scroll 滚动 设置滚动条（缺陷：横向纵向两个滚动条有时候不需要同时有）
+                auto 根据超出内容区方向生成滚动条
+          */
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <hr>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+</body>
+</html>
